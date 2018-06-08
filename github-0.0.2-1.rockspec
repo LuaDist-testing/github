@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "github"
-version = "0.0.1-1"
+version = "0.0.2-1"
 -- LuaDist source
 source = {
-  tag = "0.0.1-1",
+  tag = "0.0.2-1",
   url = "git://github.com/LuaDist-testing/github.git"
 }
 -- Original source
 -- source = {
 --   url = "git://github.com/lusis/lua-github",
---   tag = "0.0.1-1"
+--   tag = "0.0.2-1"
 -- }
 description = {
   summary = "Github API library",
@@ -21,11 +21,13 @@ description = {
     license = "Apache"
 }
 dependencies = {
-  "httpclient ~> 0.1.0-6"
+  "httpclient ~> 0.1.0-7",
+  "lpeg ~> 0.12-1"
 }
 build = {
   type = "builtin",
   modules = {
     ['github'] = 'src/github.lua',
+    ['github.parsers'] = 'src/github/parsers.lua'
   }
 }
